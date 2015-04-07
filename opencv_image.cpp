@@ -165,7 +165,6 @@ PHP_METHOD(OpenCV_Image, save) {
 
     image_object = opencv_image_object_get(getThis() TSRMLS_CC);
     cast_mode = mode;
-    cv::setBreakOnError(true);
     status = cvSaveImage(filename, image_object->cvptr, 0);
     php_opencv_throw_exception(TSRMLS_C);
 
