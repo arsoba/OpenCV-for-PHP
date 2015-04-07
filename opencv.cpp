@@ -113,7 +113,6 @@ PHP_MINIT_FUNCTION(opencv)
 	PHP_MINIT(opencv_image)(INIT_FUNC_ARGS_PASSTHRU);
 	PHP_MINIT(opencv_histogram)(INIT_FUNC_ARGS_PASSTHRU);
 	PHP_MINIT(opencv_capture)(INIT_FUNC_ARGS_PASSTHRU);
-	cv::setBreakOnError(true);
 	return SUCCESS;
 }
 /* }}} */
@@ -132,7 +131,6 @@ PHP_MSHUTDOWN_FUNCTION(opencv)
 /* {{{ PHP_RINIT_FUNCTION */
 PHP_RINIT_FUNCTION(opencv)
 {
-	cv::setBreakOnError(true);
 	return SUCCESS;
 }
 
